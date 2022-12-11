@@ -34,6 +34,7 @@ const InputBox = ({ todoList, setTodoList }) => {
       <input
         type="text"
         name="todoItem"
+        maxLength="50"
         value={text}
         ref={inputRef}
         placeholder="할 일을 입력해주세요"

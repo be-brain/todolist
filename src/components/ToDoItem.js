@@ -35,6 +35,8 @@ const ToDoItem = ({ todoItem, todoList, setTodoList }) => {
 
   const onClickSubmitButton = (e) => {
     if (e.key === "Enter") {
+      // const word = todoList.value.replace(/\s| /gi, "");
+      // if (word.length) {
       const nextTodoList = todoList.map((item) => ({
         ...item,
         text: item.id === todoItem.id ? newText : item.text, // 새로운 아이템 내용을 넣어줌
@@ -42,6 +44,7 @@ const ToDoItem = ({ todoItem, todoList, setTodoList }) => {
       setTodoList(nextTodoList);
 
       setEdited(false);
+      // }
     }
   };
 
